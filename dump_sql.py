@@ -29,7 +29,11 @@ def letsgo(download, host, ssporderid_ordernumber, debug, incremental, import_fi
        python dump_sql.py 5582 --host=panda
 
        \b
+       1. need to install dependency for python framework:
+          easy_install call
+       2. need to persist the usr and password info by:
        use mysql_config_editor set --login-path=local --host=localhost --user=username --port=portnumber --password
+       use mysql_config_editor set --login-path=qa --host=qa.xxx.com --user=username --port=portnumber --password
        and then set password in prompt
        """
     global is_debug_mode
