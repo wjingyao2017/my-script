@@ -14,6 +14,7 @@ DATE=`date +%Y-%m-%d:%H:%M:%S`
 SSPID=$1
 FILE=$2
 HOST=localhost
+#HOST=ptv-panda-xscreen-ui-lb.tubemogul.com
 PORT=8080
 if [ $# -gt 2 ];then
    PORT=$3
@@ -37,7 +38,7 @@ echo ""
 
 echo "========command======================="
 set -x 
-curl -X POST http://${HOST}:${PORT}/v1/atv/ssp-orders/${SSPID}/submit\?send\=false -H "Authorization: bearer 647891920aecc192746989035a4246f5" > ~/Documents/${FILE}.xls
+curl -X POST http://${HOST}:${PORT}/v1/atv/ssp-order/${SSPID}/submit\?send\=false -H "Authorization: bearer 698fd86d8df2fd4f353e2b705afff8b4" > ~/Documents/${FILE}.xls
 set +x
 echo ""
 echo ""
